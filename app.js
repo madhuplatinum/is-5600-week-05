@@ -19,6 +19,9 @@ app.get('/products/:id', api.getProduct)
 app.put('/products/:id', api.editProduct)
 app.delete('/products/:id', api.deleteProduct)
 app.post('/products', api.createProduct)
-// Boot the server
-app.listen(port, () => console.log(`Server listening on port ${port}`))
+app.put('/orders/:id', api.editOrder)
+app.delete('/orders/:id', api.deleteOrder)
+app.get('/orders', api.listOrders)
+app.post('/orders/', api.createOrder)
 
+app.listen(port, () => console.log(`Server listening on port ${port}`))
